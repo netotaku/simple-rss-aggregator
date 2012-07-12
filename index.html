@@ -1,0 +1,109 @@
+<!-- nbc -->
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8" />
+		<title>Latest stuff</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.5.1/build/cssreset/cssreset-min.css" />
+		<link rel="stylesheet" type="text/css" href="/stylesheets/skeleton.css" />
+		<link rel="stylesheet" type="text/css" href="/stylesheets/layout.css" />
+		<link rel="stylesheet" type="text/css" href="/stylesheets/sR.css" />
+		<link rel="stylesheet" type="text/css" href="/stylesheets/fancybox/jquery.fancybox-buttons.css" />
+        <link rel="stylesheet" type="text/css" href="/stylesheets/fancybox/jquery.fancybox-thumbs.css" />
+        <link rel="stylesheet" type="text/css" href="/stylesheets/fancybox/jquery.fancybox.css" />
+
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	    
+	</head>
+	<body>
+
+		<a name="top"></a>
+
+		<div class="loading"><span></span></div>
+
+		<div class="app hide">
+
+			<section class="top">
+				<div class="logo"></div>
+				<a href="#" class="refresh">refresh</a>
+				<div class="clear"></div>
+			</section>	
+
+		    <div class="container">
+		        
+		    	<div class="four columns alpha">
+					<menu>
+						<ul id="feeds">
+							<li><a href="/" class="selected">All</a></li>
+						</ul>
+					</menu>
+		    	</div>
+		    	<div class="twelve columns omega typography">
+		    		<div class="posts">
+						<ul id="articles"></ul>
+					</div>
+		    	</div>
+		    	<div class="sixteen columns">
+		    		<section class="footer">
+		    			<a href="#top">^^ TOP ^^</a>
+		    		</section>	
+		    	</div>
+		    </div>  
+		    
+		</div>
+
+	    <!-- templates -->
+		<script type="text/template" id="t-article">
+			<li>
+				<article>
+					<header>
+						<h2 class="br"><%= title %></h2>
+						<div class="author"><address>By <%= author %></address>, <time><%= publishedDate %></time></div>
+	    			</header>
+	    			<section class="content"><%= contentSnippet %></section>
+	    			<footer>
+						<p>Origin <a href="<%= sourceURL %>"><%= source %></a> | <a href="<%= readMore %>" class="read-more">Read more...</a></p>
+					</footer>
+				</article>	
+			</li>
+		</script>
+
+		<script type="text/template" id="t-post">
+			<li>
+				<article>
+					<header>
+						<h2 class="br"><%= title %></h2>
+						<div class="author"><address>By <%= author %></address>, <time><%= publishedDate %></time></div>
+	    			</header>
+	    			<section class="content"><%= content %></section>
+	    			<section class="images"></section>
+	    			<footer>
+	        			<p>Origin: <a href="<%= sourceURL %>"><%= source %></a></p>
+	        		</footer>
+        		</article>
+			</li>
+		</script>		
+
+		<script type="text/template" id="t-feed"><li><a href="/feed/<%= sourceID %>"><%= title %></a></li></script>
+
+		<!-- scripts -->
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script type="text/javascript" src="/js/lib/jquery.fancybox.js"></script>
+		<script type="text/javascript" src="/js/lib/jquery.fancybox-buttons.js"></script>
+		<script type="text/javascript" src="/js/lib/jquery.fancybox-thumbs.js"></script>
+        <script type="text/javascript" src="/js/lib/jquery.easing-1.3.pack.js"></script>
+		<script type="text/javascript" src="/js/lib/jquery.mousewheel-3.0.6.pack.js"></script>		
+		<script type="text/javascript" src="/js/lib/json2.js"></script>
+		<script type="text/javascript" src="/js/lib/underscore.js"></script>
+		<script type="text/javascript" src="/js/lib/backbone.js"></script>
+		<script type="text/javascript" src="/js/util.js"></script>
+		<script type="text/javascript" src="/js/sR.js"></script>
+
+	</body>
+</html>
